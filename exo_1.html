@@ -8,7 +8,12 @@
 <body>
     <script>
         function presenter (nom, age, passion, maison) {
-            console.log( `Je m'apelle ${nom.charAt(0).toUpperCase()}${nom.slice(1)}, j'ai ${age} ans, je suis passionné de ${passion} et j'appartiens à la maison ${maison} !`)
+            if (typeof(age)=="number") {
+                console.log( `Je m'apelle ${nom.charAt(0).toUpperCase()}${nom.slice(1)}, j'ai ${age} ans, je suis passionné de ${passion} et j'appartiens à la maison ${maison} !`)
+            }else{
+                console.log(`Erreur l'age doit être un nombre `)
+            }
+            
         }
         
         
