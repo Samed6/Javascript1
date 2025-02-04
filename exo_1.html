@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function presenter (nom, age, passion, maison) {
+            if (typeof(age)=="number") {
+                let nomModi= nom.charAt(0).toUpperCase()
+                console.log(nomModi);
+                console.log( `Je m'apelle  ${nomModi}${nom.slice(1)}, j'ai ${age} ans, je suis passionné de ${passion} et j'appartiens à la maison ${maison} !`)
+            }else{
+                console.log(`Erreur l'age doit être un nombre `)
+            }
+            
+        }
+        
+        
+      presenter("harry",23,"magie","variabledor")
+    </script>
+</body>
+</html>
