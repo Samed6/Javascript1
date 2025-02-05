@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function traduireSort(sort,langue) {
+            let sortMiniscule = sort.toLowerCase()
+            sortMiniscule=sortMiniscule.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            let dictsort={
+                "lumos":{
+                    fr: "Lumière", 
+                    en: "Light" 
+                },
+                "lumière":{
+                    fr: "Lumos",
+                    en: "Lumos"
+                },
+                "rasengan": {
+                    fr: "Tourbillonnante",
+                    en: "Rasengan"
+                },
+                "sharingan": {
+                    fr: "Œil Copieur",
+                    en: "Sharingan"
+                },
+                "chidori": {
+                    fr: "Mille Oiseaux",
+                    en: "Chidori"
+                }
+            }
+            if (dictsort[sortMiniscule]) {
+                return dictsort[sortMiniscule][langue]
+            }else{
+                console.log(`Sort inconnu`)
+            }
+        }
+
+        console.log(traduireSort('Lumos', 'en'))
+    </script>
+</body>
+</html>
